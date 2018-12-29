@@ -1,0 +1,10 @@
+<div class="row" style="padding: 20px 0;">
+    <div class="col">
+        <h2 class="lead">Liste des patients</h2>
+        <ul class="list-group">
+            {{#each patients}}
+                <li class="list-group-item"><a href="/patients/{{ id }}">Patient N# {{ id }}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="row" style="padding:20px 0;">
+    <div class="col">
+        <h1 class="lead">
+            Electrocardiogramme du patient N# {{ id }}
+        </h1>
+
+        <div class="ct-chart" style="height: 500px;"></div>
+
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>
+<script>
+    new Chartist.Line('.ct-chart', {
+        labels: [],
+        series: [
+            [{{ signals }}]
+        ]
+        }, {
+            low: 0,
+            showArea: true,
+            showPoint: false,
+            axisY: {
+                // We can disable the grid for this axis
+                showGrid: true,
+                // and also don't show the label
+                showLabel: false
+            },
+        });
+</script>
