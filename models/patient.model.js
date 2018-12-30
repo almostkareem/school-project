@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let PatientSchema = new Schema({
-    id: {type: Number, required: true, max: 100}
+    id: { type: Number, required: true, max: 100 }
 });
 
 
